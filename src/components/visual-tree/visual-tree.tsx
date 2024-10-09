@@ -2,11 +2,11 @@ import { Component, Prop, h } from '@stencil/core';
 import { format } from '../../utils/utils';
 
 @Component({
-  tag: 'my-component',
-  styleUrl: 'my-component.css',
+  tag: 'visual-tree',
+  styleUrl: 'visual-tree.css',
   shadow: true,
 })
-export class MyComponent {
+export class VisualTreeComponent {
   /**
    * The first name
    */

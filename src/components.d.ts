@@ -5,8 +5,9 @@
  * It contains typing information for all components that exist in this project.
  */
 import { HTMLStencilElement, JSXBase } from "@stencil/core/internal";
+import { VisualTreeComponent } from "./components/visual-tree/visual-tree";
 export namespace Components {
-    interface MyComponent {
+    interface VisualTreeComponent {
         /**
           * The first name
          */
@@ -22,18 +23,18 @@ export namespace Components {
     }
 }
 declare global {
-    interface HTMLMyComponentElement extends Components.MyComponent, HTMLStencilElement {
+    interface HTMLVisualTreeElement extends Components.VisualTreeComponent, HTMLStencilElement {
     }
     var HTMLMyComponentElement: {
-        prototype: HTMLMyComponentElement;
-        new (): HTMLMyComponentElement;
+        prototype: HTMLVisualTreeElement;
+        new (): HTMLVisualTreeElement;
     };
     interface HTMLElementTagNameMap {
-        "my-component": HTMLMyComponentElement;
+        "visual-tree": HTMLVisualTreeElement;
     }
 }
 declare namespace LocalJSX {
-    interface MyComponent {
+    interface VisualTreeComponent {
         /**
           * The first name
          */
@@ -48,14 +49,14 @@ declare namespace LocalJSX {
         "middle"?: string;
     }
     interface IntrinsicElements {
-        "my-component": MyComponent;
+        "visual-tree": VisualTreeComponent;
     }
 }
 export { LocalJSX as JSX };
 declare module "@stencil/core" {
     export namespace JSX {
         interface IntrinsicElements {
-            "my-component": LocalJSX.MyComponent & JSXBase.HTMLAttributes<HTMLMyComponentElement>;
+            "visual-tree": LocalJSX.VisualTreeComponent & JSXBase.HTMLAttributes<HTMLVisualTreeElement>;
         }
     }
 }
